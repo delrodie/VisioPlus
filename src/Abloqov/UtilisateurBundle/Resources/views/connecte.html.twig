@@ -1,0 +1,15 @@
+<div>
+    {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+        <li><a href="{{ path('fos_user_profile_show') }}">Bonjour {{  app.user.username }}</a> </li>
+        <li> <a href="{{ path('fos_user_security_logout') }}">{{ 'Se deconnecter'|trans([], 'FOSUserBundle') }}</a></li>
+    {% else %}
+        <li><a href="{{ path('fos_user_security_login') }}">{{ 'Se connecter'|trans([], 'FOSUserBundle') }}</a></li>
+        <li><a href="{{ path('fos_user_registration_register') }}">{{ 'Utilisateur'|trans([], 'FOSUserBundle') }}</a></li>
+    {% endif %}
+</div>
+
+    {% for key, flash in app.session.get('flashes') %}
+        <div class="{{ fash }}">
+            {{ key|trans([], 'FOSUserBundle') }}
+        </div>
+    {% endfor %}

@@ -1,0 +1,38 @@
+                <div class="monture">
+                   <table class="data display datatable" >
+                                	<thead>
+                                    	<th>N°</th>
+                                        <th> MARQUES </th>
+                                        <th> REFERENCES </th>
+                                        <th> GENRE </th>
+                                        <th> PRIX </th>
+                                        <th> STOCK </th>
+                                        <th> CREATION</th>
+                                        <th> ACTIONS </th>
+                                    </thead>
+                                    <tbody>
+                                        {% set numero = 0 %}
+                                        {% for monture in montures %}
+                                            <tr class="">
+                                            {% set numero = numero + 1 %}
+                                            <td>{{ numero }}</td>
+                                            <td class="a-gauche"> {{ monture.marque }} </td>
+                                            <td> {{ monture.reference }} </td>
+                                            <td> {{ monture.genre }} </td>
+                                            <td class="a-droite"> {{ monture.prixvente|number_format('0', '', '.') }} </td>
+                                            <td> {{ monture.stock }} </td>
+                                            <td> {{ monture.datecreationAt|date('d/m/Y') }} </td>
+                                            <td>
+                                                <a href="{{ path('monture_edit', { 'id' : monture.id }) }}" title="Modifier la monture"><i class="icon-copy"></i></a> 
+                                                &nbsp; | &nbsp; 
+                                                <a href="{{ path('monture_show' , { 'id' : monture.id }) }}" title="Voir les details de la monture"> <i class="icon-search"> </i></a>
+                                            </td>
+                                        </tr>
+                                        {% endfor %}
+                                    </tbody>
+                                </table>
+                                <div class="aller-page">
+                                <a href="{{ path('monture_new') }}"><i class="icon-plus"></i> Ajouter une monture</a>
+                                </div>
+                                </div>
+                    <div class="clear"></div>

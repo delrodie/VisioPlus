@@ -1,0 +1,30 @@
+monture:
+    path:     /
+    defaults: { _controller: "AbloqovVisioplusBundle:Monture:index" }
+
+monture_show:
+    path:     /{id}/show
+    defaults: { _controller: "AbloqovVisioplusBundle:Monture:show" }
+
+monture_new:
+    path:     /new
+    defaults: { _controller: "AbloqovVisioplusBundle:Monture:new" }
+
+monture_create:
+    path:     /create
+    defaults: { _controller: "AbloqovVisioplusBundle:Monture:create" }
+    requirements: { _method: post }
+
+monture_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "AbloqovVisioplusBundle:Monture:edit" }
+
+monture_update:
+    path:     /{id}/update
+    defaults: { _controller: "AbloqovVisioplusBundle:Monture:update" }
+    requirements: { _method: post|put }
+
+monture_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "AbloqovVisioplusBundle:Monture:delete" }
+    requirements: { _method: post|delete }

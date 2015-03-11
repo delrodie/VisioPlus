@@ -1,0 +1,2 @@
+imports:
+    - { resource: "@AbloqovVisioplusBundle/Resources/config/security.yml" }

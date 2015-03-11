@@ -1,0 +1,1 @@
+{ parameters: { database_driver: pdo_mysql, database_host: 127.0.0.1, database_port: null, database_name: visioplus, database_user: root, database_password: null, mailer_transport: smtp, mailer_host: 127.0.0.1, mailer_user: null, mailer_password: null, locale: en, secret: ade543576cdfeb6fe6c9c8e6d4668465a6c7d8bd, database_path: null } }

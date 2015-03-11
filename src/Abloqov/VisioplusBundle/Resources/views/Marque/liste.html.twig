@@ -1,0 +1,11 @@
+                                                {% for
+                                                <td class="a-gauche"> {{ marque.libelle }} </td>
+                                                <td> {{ nombreMonture }}</td>
+                                                <td> 15 </td>
+                                                <td> 25 </td>
+                                                <td> 5 </td>
+                                                <td>
+                                                    <a href="{{ path('marque_edit', { 'id': marque.id }) }}" title="Modifier la marque"><i class="icon-copy"></i></a> 
+                                                    &nbsp; | &nbsp; 
+                                                    <a href="{{ path('marque_show', { 'id': marque.id }) }}" title="Voir les details de la marque"> <i class="icon-search"> </i></a>
+                                                </td>   

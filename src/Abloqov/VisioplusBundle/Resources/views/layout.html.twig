@@ -1,0 +1,126 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <link rel="shortcut icon" type="image/png" href="{{ asset('bundles/abloqovvisioplus/images/favicon.fw.png') }}" />
+    <title>
+        {% block title %}
+            Visio + 0.1 :: Système de gestion des officines d'optique
+        {% endblock %}
+    </title>
+    
+    {% block styleCSS %}
+       <link rel="stylesheet" href="{{ asset('bundles/abloqovvisioplus/css/iconFont.css') }}" type="text/css" media="all" /> 
+    {% endblock %}
+    
+    {% block javascript %}
+        
+    {% endblock %}
+    
+    
+</head>
+<body>
+    <div class="container_12">
+        <div class="grid_12 header-repeat">
+            <div id="branding">
+                <div class="floatleft">
+                    <img src="{{ asset('bundles/abloqovvisioplus/images/logo.fw.png') }}" alt="Logo" /></div>
+                <div class="floatright">
+                    <div class="floatleft">
+                        <img src="{{ asset('bundles/abloqovvisioplus/images/img-profile.jpg') }}" alt="Photo de profile" /></div>
+                    <div class="floatleft marginleft10">
+                        <ul class="inline-ul floatleft">
+                            
+                            {% include "AbloqovUtilisateurBundle::connecte.html.twig" %}
+                        </ul>
+                        <br />
+                        <!--<span class="small grey">Last Login: 3 hours ago</span>-->
+                    </div>
+                </div>
+                <div class="clear">
+                </div>
+            </div>
+        </div>
+        <div class="clear">
+        </div>
+        <div class="grid_12">
+            <ul class="nav main">
+                <li class="ic-dashboard"><a href=""><span>Tableau de bord</span></a></li>
+                <li class="ic-form-style"><a href="javascript:"><span>Assurances</span></a></li>
+                <li class="ic-client"><a href=""><span>Clients</span></a></li>
+				<li class="ic-facturation"><a href=""><span>Facturations</span></a></li>
+                <li class="ic-montures"><a href="javascript:"><span>Montures</span></a>
+               		 <ul>
+                        <li><a href="{{ path('marque') }}">Marques</a> </li>
+                        <li><a href="{{ path('monture') }}">Montures</a> </li>
+                        <li><a href="">Fournisseurs</a> </li>
+                        <li><a href="">Approvisionnements</a> </li>
+                    </ul>
+                </li>
+                <li class="ic-facturation"><a href=""><span>Règlements</span></a></li>
+                <li class="ic-notifications"><a href=" "><span>Traitements</span></a></li>
+                <li class="ic-verre"><a href="javascript:"><span>Verres</span></a>
+               		 <ul>
+                        <li><a href=" ">Types verres</a> </li>
+                        <li><a href=" ">Fournisseurs</a> </li>
+                        <li><a href=" ">Approvisionnements</a> </li>
+                    </ul>
+                </li>
+
+            </ul>
+        </div>
+        <div class="clear">
+        </div>
+        <div class="grid_2">
+            <div class="box sidemenu">
+                <div class="block" id="section-menu">
+                    <ul class="section menu">
+                        <li><a class="menuitem">Tableau de bord</a>
+                            <ul class="submenu">
+                                <li><a>Assurances</a> </li>
+                                <li><a>ventes</a> </li>
+                                <li><a>Montures</a> </li>
+                                <li><a>Verres</a> </li>
+                                <li><a>Règlements</a> </li>
+                              
+                            </ul>
+                        </li>
+                        <li><a class="menuitem">Utilisateurs</a>
+                            <ul class="submenu">
+                                <li><a>Ajouter</a> </li>
+                                <li><a>Modifier</a> </li>
+                                <li><a>Supprimer</a> </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        {% block content %}
+            
+        {% endblock %}
+        
+        <div class="clear">
+        </div>
+    </div>
+    <div class="clear">
+    </div>
+    <div id="site_info">
+        <div class="zone-signature">
+        	<div class="gauche">
+            	 <strong><span class="grand-format">&copy; &nbsp;<a href="http://www.abloqov-group.com/applications/visio+/" target="_blank"> VISIO+</a></span></strong>
+                 <span class="version">v 0.1</span> 
+                 <span class="separateur">| </span>
+                 <span class="annee">2015</span>
+            	<span class="mise-a-jour">Dernière mise à jour Mars 2015</span>
+            </div>
+        	<div class="gauche">
+            </div>
+            <div class="droite">
+            	By <a href="http://wwww.abloqov-group.com/" target="_blank">ABLOQOV GROUP</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

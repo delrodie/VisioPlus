@@ -1,0 +1,30 @@
+marque:
+    path:     /
+    defaults: { _controller: "AbloqovVisioplusBundle:Marque:index" }
+
+marque_show:
+    path:     /{id}/show
+    defaults: { _controller: "AbloqovVisioplusBundle:Marque:show" }
+
+marque_new:
+    path:     /new
+    defaults: { _controller: "AbloqovVisioplusBundle:Marque:new" }
+
+marque_create:
+    path:     /create
+    defaults: { _controller: "AbloqovVisioplusBundle:Marque:create" }
+    requirements: { _method: post }
+
+marque_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "AbloqovVisioplusBundle:Marque:edit" }
+
+marque_update:
+    path:     /{id}/update
+    defaults: { _controller: "AbloqovVisioplusBundle:Marque:update" }
+    requirements: { _method: post|put }
+
+marque_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "AbloqovVisioplusBundle:Marque:delete" }
+    requirements: { _method: post|delete }

@@ -1,0 +1,52 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+    <h1>Monture</h1>
+
+    <table class="record_properties">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ entity.id }}</td>
+            </tr>
+            <tr>
+                <th>Reference</th>
+                <td>{{ entity.reference }}</td>
+            </tr>
+            <tr>
+                <th>Genre</th>
+                <td>{{ entity.genre }}</td>
+            </tr>
+            <tr>
+                <th>Prix_vente</th>
+                <td>{{ entity.prixvente }}</td>
+            </tr>
+            <tr>
+                <th>Stock</th>
+                <td>{{ entity.stock }}</td>
+            </tr>
+            <tr>
+                <th>Datecreation_at</th>
+                <td>{{ entity.datecreationat|date('Y-m-d H:i:s') }}</td>
+            </tr>
+            <tr>
+                <th>Datemodification_at</th>
+                <td>{{ entity.datemodificationat|date('Y-m-d H:i:s') }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+        <ul class="record_actions">
+    <li>
+        <a href="{{ path('monture') }}">
+            Back to the list
+        </a>
+    </li>
+    <li>
+        <a href="{{ path('monture_edit', { 'id': entity.id }) }}">
+            Edit
+        </a>
+    </li>
+    <li>{{ form(delete_form) }}</li>
+</ul>
+{% endblock %}

@@ -1,0 +1,17 @@
+<div>
+    {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+        
+        <span class="button"> <a href="{{ path('fos_user_security_logout') }}">{{ 'Se deconnecté'|trans([], 'FOSUserBundle') }}</a></span>
+        <span class="register"><a href="{{ path('acteur') }}">Retour</span>
+        
+    {% else %}
+        <span class="button"><a href="{{ path('fos_user_security_login') }}">{{ 'Se connecter'|trans([], 'FOSUserBundle') }}</a></span>
+        <span class="register"><a href="http://www.vision-originale.net/" target="_blank">Annuler</span>
+    {% endif %}
+</div>
+
+    {% for key, flash in app.session.get('flashes') %}
+        <div class="{{ fash }}">
+            {{ key|trans([], 'FOSUserBundle') }}
+        </div>
+    {% endfor %}

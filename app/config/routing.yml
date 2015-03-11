@@ -1,0 +1,11 @@
+#abloqov_utilisateur:
+ #   resource: "@AbloqovUtilisateurBundle/Resources/config/routing.yml"
+ #   prefix:   /
+
+abloqov_visioplus:
+    resource: "@AbloqovVisioplusBundle/Resources/config/routing.yml"
+    prefix:   /
+
+app:
+    resource: @AppBundle/Controller/
+    type:     annotation

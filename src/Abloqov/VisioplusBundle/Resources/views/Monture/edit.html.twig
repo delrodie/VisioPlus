@@ -1,0 +1,236 @@
+{% extends 'AbloqovVisioplusBundle::layout.html.twig' %}
+
+{% block styleCSS %}
+    {{ parent() }}
+    <link rel="stylesheet" type="text/css" href="{{ asset('bundles/abloqovvisioplus/css/reset.css') }}" media="screen" />
+    <link rel="stylesheet" type="text/css" href="{{ asset('bundles/abloqovvisioplus/css/text.css') }}" media="screen" />
+    <link rel="stylesheet" type="text/css" href="{{ asset('bundles/abloqovvisioplus/css/grid.css') }}" media="screen" />
+    <link rel="stylesheet" type="text/css" href="{{ asset('bundles/abloqovvisioplus/css/layout.css') }}" media="screen" />
+    <link rel="stylesheet" type="text/css" href="{{ asset('bundles/abloqovvisioplus/css/nav.css') }}" media="screen" />
+    <!--[if IE 6]><link rel="stylesheet" type="text/css" href="{{ asset('bundles/abloqovvisioplus/css/ie6.css') }}" media="screen" /><![endif]-->
+    <!--[if IE 7]><link rel="stylesheet" type="text/css" href="{{ asset('bundles/abloqovvisioplus/css/ie.css') }}" media="screen" /><![endif]--> 
+    <link rel="stylesheet" type="text/css" href="{{ asset('bundles/abloqovvisioplus/css/jquery.jqplot.min.css') }}" /> 
+    
+{% endblock %}
+
+{% block javascript %}
+<!-- BEGIN: load jquery -->
+    <script src="{{ asset('bundles/abloqovvisioplus/js/jquery-1.6.4.min.js') }}" type="text/javascript"></script>
+    <script type="text/javascript" src="{{ asset('bundles/abloqovvisioplus/js/jquery-ui/jquery.ui.core.min.js') }}"></script>
+    <script src="{{ asset('bundles/abloqovvisioplus/js/jquery-ui/jquery.ui.widget.min.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('bundles/abloqovvisioplus/js/jquery-ui/jquery.ui.accordion.min.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('bundles/abloqovvisioplus/js/jquery-ui/jquery.effects.core.min.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('bundles/abloqovvisioplus/js/jquery-ui/jquery.effects.slide.min.js') }}" type="text/javascript"></script>
+    <!-- END: load jquery -->
+    <!-- BEGIN: load jqplot -->
+    <!--[if lt IE 9]><script language="javascript" type="text/javascript" src="{{ asset('bundles/abloqovvisioplus/js/jqPlot/excanvas.min.js') }}"></script><![endif]-->
+    <script language="javascript" type="text/javascript" src="{{ asset('bundles/abloqovvisioplus/js/jqPlot/jquery.jqplot.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('bundles/abloqovvisioplus/js/jqPlot/plugins/jqplot.canvasTextRenderer.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('bundles/abloqovvisioplus/js/jqPlot/plugins/jqplot.canvasAxisLabelRenderer.min.js') }}"></script>
+    <script language="javascript" type="text/javascript" src="{{ asset('bundles/abloqovvisioplus/js/jqPlot/plugins/jqplot.barRenderer.min.js') }}"></script>
+    <script language="javascript" type="text/javascript" src="{{ asset('bundles/abloqovvisioplus/js/jqPlot/plugins/jqplot.pieRenderer.min.js') }}"></script>
+    <script language="javascript" type="text/javascript" src="{{ asset('bundles/abloqovvisioplus/js/jqPlot/plugins/jqplot.categoryAxisRenderer.min.js') }}"></script>
+    <script language="javascript" type="text/javascript" src="{{ asset('bundles/abloqovvisioplus/js/jqPlot/plugins/jqplot.highlighter.min.js') }}"></script>
+    <script language="javascript" type="text/javascript" src="{{ asset('bundles/abloqovvisioplus/js/jqPlot/plugins/jqplot.pointLabels.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('bundles/abloqovvisioplus/js/jqPlot/plugins/jqplot.donutRenderer.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('bundles/abloqovvisioplus/js/jqPlot/plugins/jqplot.bubbleRenderer.min.js') }}"></script>
+    <!-- END: load jqplot -->
+    <script src="{{ asset('bundles/abloqovvisioplus/js/setup.js') }}" type="text/javascript"></script>
+  <script type="text/javascript">
+
+        $(document).ready(function () {
+            setupLeftMenu();
+
+          			setSidebarHeight();
+
+
+        });
+    </script>
+{% endblock %}
+
+{% block content %}
+     
+    
+    <div class="grid_10">
+            
+        <div class="box round">
+            <h2>Statistiques</h2>
+            <div class="stat-col">
+                        <span>Solaires</span>
+                        <p class="darkblue">
+                            {{ MontureSolaire }}
+                        </p>
+                    </div>
+                    <div class="stat-col">
+                        <span>Mixtes</span>
+                        <p class="green">
+                            {{ MontureMixte }}
+                        </p>
+                    </div>
+                    <div class="stat-col">
+                        <span>Hommes</span>
+                        <p class="blue">
+                            {{ MontureHomme }}
+                        </p>
+                    </div>
+                    <div class="stat-col">
+                        <span>Femmes</span>
+                        <p class="red">
+                            {{ MontureFemme }}
+                        </p>
+                    </div>
+                    <div class="stat-col">
+                        <span>Enfants</span>
+                        <p class="yellow">
+                            {{ MontureEnfant }}
+                        </p>
+                    </div>
+                    <div class="stat-col">
+                        <span>Montures</span>
+                        <p class="purple">
+                            {{ NombreTotalMonture }}
+                        </p>
+                    </div>
+            <div class="block">
+                <div class="clear"></div>
+            </div>
+        </div>
+        <div class="clear"></div>
+            <!-- / ZONE STATISTIQUES -->
+    </div>
+    
+    <div class="grid_10">
+            
+        <!-- TABLEAU D'ENREGISTREMENT -->
+        <div class="box round">
+            <div class="block">
+                <h1>GESTION DES MONTURES</h1>
+                    
+                    <form action="{{ path('monture_update', {'id': entity.id}) }}" method="post" {{ form_enctype(edit_form) }}> 
+                    <table border="1" class="montures">
+                        {% if form_errors(edit_form)  %}
+                            <tr>
+                                <td colspan="7" class="message">
+                                    <i class="icon-warning"></i> 
+                                    {{ form_errors(edit_form) }}
+                                </td>
+                            </tr>
+                        {% endif %}
+                        {% if form_errors(edit_form.marque) %}
+                            <tr>
+                                <td colspan="7" class="message">
+                                    <i class="icon-warning"></i> 
+                                    {{ form_errors(edit_form.marque) }}
+                                    {{ form_errors(edit_form.reference) }}
+                                </td>
+                            </tr>
+                        {% endif %}
+                        {% if form_errors(edit_form.reference)  %}
+                            <tr>
+                                <td colspan="7" class="message">
+                                    <i class="icon-warning"></i> 
+                                    {{ form_errors(edit_form.reference) }}
+                                </td>
+                            </tr>
+                            
+                        {% endif %}
+                    	<tr>
+                            <td class="libelle">
+                                {{ form_label(edit_form.marque) }}
+                            </td>
+                            <td class="seperateur1"></td>
+                            <td class="text-input">
+                                {{ form_widget(edit_form.marque) }}
+                            </td>
+                            <td class="separateur2"></td>
+                            <td class="libelle">
+                                {{ form_label(edit_form.reference) }}
+                            </td>
+                            <td class="seperateur1"></td>
+                            <td class="text-input">
+                                {{ form_widget(edit_form.reference) }}
+                            </td>
+                        </tr>
+                        <tr class="seperateurV">
+                            <td colspan="7" class="message">
+                                {% if form_errors(edit_form.genre) %}
+                            	
+                                    <i class="icon-warning"></i>  
+                                    {{ form_errors(edit_form.genre) }}
+                                
+                                {% elseif form_errors(edit_form.prix_vente) %}
+                                    
+                                    <i class="icon-warning"></i> 
+                                    {{ form_errors(edit_form.prix_vente) }}
+                                    
+                                {% endif %}
+                            </td>
+                            
+                        </tr>
+                    	<tr>
+                            <td class="libelle">
+                                {{ form_label(edit_form.genre) }}
+                            </td>
+                            <td class="seperateur1"></td>
+                            <td class="text-input">
+                                {{ form_widget(edit_form.genre) }}
+                            </td>
+                            <td class="separateur2"></td>
+                            <td class="libelle">
+                                {{ form_label(edit_form.prix_vente) }}
+                            </td>
+                            <td class="seperateur1"></td>
+                            <td class="text-input">
+                                {{ form_widget(edit_form.prix_vente) }}
+                            </td>
+                        </tr>
+                        <tr class="seperateurV">
+                            <td colspan="7" class="message">
+                                {% if form_errors(edit_form.stock) %}
+                                    
+                                    <i class="icon-warning"></i> 
+                                    {{ form_errors(edit_form.stock) }}
+                                    
+                                {% endif %}
+                            </td>
+                            
+                        </tr>
+                    	<tr>
+                            <td class="libelle">
+                                {{ form_label(edit_form.stock) }}
+                            </td>
+                            <td class="seperateur1"></td>
+                            <td class="text-input">
+                                {{ form_widget(edit_form.stock) }}
+                            </td>
+                            <td class="separateur2"></td>
+                        </tr>
+                        <tr class="seperateurV"></tr>
+                    	<tr>
+                            <td class=""></td>
+                            <td class=""></td>
+                            <td class=""></td>
+                            <td class="separateur2"></td>
+                            <td class="bouton-validation" colspan="3">
+                                {{ form(edit_form) }}
+                            </td>
+                        </tr>
+                        <tr class="seperateurV"></tr>
+                        <tr class="seperateurV"></tr>
+                        <tr>
+                            <td colspan="7" class="retour-page">
+                                <a href="{{ path('monture') }}"><i class="icon-undo"></i> Retour à la liste des montures</a>
+                            </td>
+                        </tr>
+                    </table>
+                    </form>  
+                <div class="clear"></div>
+            </div>
+        </div>
+            
+            
+    </div>            
+   
+
+    
+{% endblock %}
