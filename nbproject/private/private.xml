@@ -2,15 +2,6 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group>
-            <file>file:/C:/xampp/htdocs/VisioPlus/src/Abloqov/VisioplusBundle/Resources/config/security.yml</file>
-            <file>file:/C:/xampp/htdocs/VisioPlus/app/config/security.yml</file>
-            <file>file:/C:/xampp/htdocs/VisioPlus/vendor/bundles/FOS/UserBundle/Resources/views/ChangePassword/changePassword_content.html.twig</file>
-            <file>file:/C:/xampp/htdocs/VisioPlus/src/Abloqov/UtilisateurBundle/Resources/views/flag2.html.twig</file>
-            <file>file:/C:/xampp/htdocs/VisioPlus/src/Abloqov/UtilisateurBundle/Resources/views/layout.html.twig</file>
-            <file>file:/C:/xampp/htdocs/VisioPlus/src/Abloqov/VisioplusBundle/Resources/views/layout.html.twig</file>
-            <file>file:/C:/xampp/htdocs/VisioPlus/src/Abloqov/UtilisateurBundle/Resources/views/Security/login.html.twig</file>
-            <file>file:/C:/xampp/htdocs/VisioPlus/src/Abloqov/UtilisateurBundle/Resources/views/connecte.html.twig</file>
-        </group>
+        <group/>
     </open-files>
 </project-private>
