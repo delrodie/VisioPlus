@@ -1,0 +1,82 @@
+<?php
+
+namespace Abloqov\VisioplusBundle\Entity;
+use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
+
+/**
+ * Description of Assurance
+ *
+ * @author Delrodie AMOIKON
+ */
+
+/**
+ * @ORM\Entity
+ */
+class Client {
+    /**
+     * @ORM\GeneratedValue
+     * @ORM\Id
+     * @ORM\Column(type="integer")
+     */
+    private $id;
+    
+    /**
+     * @ORM\Column(type="string", length=25, nullable=false)
+     * @Assert\NotBlank()
+     * @Assert\Length(
+     *          min = "3",
+     *          max = "25",
+     *          minMessage = "Le nom doit faire au moins {{ limit }} caractères",
+     *          maxMessage = "Le nom ne peut pas être plus long que {{ limit }} caractères"
+     * )
+     */
+    private $nom;
+    
+    /**
+     * @ORM\Column(type="string", length=100, nullable=false)
+     * @Assert\length(
+     *          min = "3",
+     *          max = "100",
+     *          minMessage = "Le prenom doit faire au moins {{ limit }} caractères",
+     *          maxMessage = "Le prenom ne peut pas être plus long que {{ limit }} caractères"
+     * )
+     */
+    private $prenom;
+    
+    /**
+     * @ORM\Column(type="string", length=1, nullable=false)
+     * @Assert\NotBlank()
+     * @Assert\Choice(choices={"M", "F"}, message="Choisissez un sexe valide.")
+     */
+    private $sexe;
+    
+    /**
+     * @ORM\Column(type="string", length=11, nullable=false)
+     * @Assert\NotBlank()
+     * @Assert\length(
+     *          min = "8",
+     *          max = "11",
+     *          minMessage = "Le cellulaire doit faire au moins {{ limit }} caractères",
+     *          maxMessage = "Le cellulaire ne peut pas être plus long que {{ limit }} caractères"
+     * )
+     */
+    private $cel;
+    
+    /**
+     * @ORM\Column(type="string", length=11, nullable=true)
+     * @Assert\length(
+     *          min = "8",
+     *          max = "11",
+     *          minMessage = "Le téléphone doit faire au moins {{ limit }} caractères",
+     *          maxMessage = "Le téléphone ne peut pas être plus long que {{ limit }} caractères"
+     * )
+     */
+    private $tel;
+    
+    /**
+     * @ORM\ManyToone(targetEntity="Assurance")
+     * @Assert\NotBlank()
+     */
+    private $assurance;
+}

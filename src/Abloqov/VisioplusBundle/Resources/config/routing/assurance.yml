@@ -1,0 +1,30 @@
+assurance:
+    path:     /
+    defaults: { _controller: "AbloqovVisioplusBundle:Assurance:index" }
+
+assurance_show:
+    path:     /{id}/show
+    defaults: { _controller: "AbloqovVisioplusBundle:Assurance:show" }
+
+assurance_new:
+    path:     /new
+    defaults: { _controller: "AbloqovVisioplusBundle:Assurance:new" }
+
+assurance_create:
+    path:     /create
+    defaults: { _controller: "AbloqovVisioplusBundle:Assurance:create" }
+    methods:  POST
+
+assurance_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "AbloqovVisioplusBundle:Assurance:edit" }
+
+assurance_update:
+    path:     /{id}/update
+    defaults: { _controller: "AbloqovVisioplusBundle:Assurance:update" }
+    methods:  [POST, PUT]
+
+assurance_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "AbloqovVisioplusBundle:Assurance:delete" }
+    methods:  [POST, DELETE]

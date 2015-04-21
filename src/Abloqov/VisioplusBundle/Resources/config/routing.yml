@@ -1,3 +1,23 @@
+abloqov_visioplus_client:
+    resource: "@AbloqovVisioplusBundle/Resources/config/routing/client.yml"
+    prefix:   /client
+
+abloqov_visioplus_assurance:
+    resource: "@AbloqovVisioplusBundle/Resources/config/routing/assurance.yml"
+    prefix:   /assurance
+
+abloqov_visioplus_typeassurance:
+    resource: "@AbloqovVisioplusBundle/Resources/config/routing/typeassurance.yml"
+    prefix:   /typeassurance
+
+abloqov_visioplus_traitement:
+    resource: "@AbloqovVisioplusBundle/Resources/config/routing/traitement.yml"
+    prefix:   /traitement
+
+abloqov_visioplus_typeverre:
+    resource: "@AbloqovVisioplusBundle/Resources/config/routing/typeverre.yml"
+    prefix:   /typeverre
+
 abloqov_visioplus_monture:
     resource: "@AbloqovVisioplusBundle/Resources/config/routing/monture.yml"
     prefix:   /monture

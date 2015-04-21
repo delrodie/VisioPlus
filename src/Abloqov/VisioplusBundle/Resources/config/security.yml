@@ -39,8 +39,17 @@ security:
         # PAGES ACCESSIBLES AUX ADMINISTRATEURS
         - { path: ^/admin/, role: ROLE_ADMIN }
         - { path: ^/register/, role: ROLE_ADMIN }
+        - { path: ^/typeverre/new, role: ROLE_ADMIN }
+        - { path: ^/traitement/new, role: ROLE_ADMIN }
+        - { path: ^/traitement/.*/edit, role: ROLE_ADMIN }
+        - { path: ^/assurance/.*/edit, role: ROLE_ADMIN }
         
         # PAGES ACCESSIBLES AUX UTILISATEURS
         - { path: ^/change-password, role: ROLE_USER }
         - { path: ^/marque.*, role: ROLE_USER }
         - { path: ^/monture.*, role: ROLE_USER }
+        - { path: ^/typeverre/, role: ROLE_USER }
+        - { path: ^/traitement/, role: ROLE_USER }
+        - { path: ^/assurance/, role: ROLE_USER }
+        - { path: ^/assurance/.*/show, role: ROLE_USER }
+        - { path: ^/client.*, role: ROLE_USER }

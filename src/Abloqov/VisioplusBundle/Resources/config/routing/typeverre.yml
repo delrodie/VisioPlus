@@ -1,0 +1,30 @@
+typeverre:
+    path:     /
+    defaults: { _controller: "AbloqovVisioplusBundle:Typeverre:index" }
+
+typeverre_show:
+    path:     /{id}/show
+    defaults: { _controller: "AbloqovVisioplusBundle:Typeverre:show" }
+
+typeverre_new:
+    path:     /new
+    defaults: { _controller: "AbloqovVisioplusBundle:Typeverre:new" }
+
+typeverre_create:
+    path:     /create
+    defaults: { _controller: "AbloqovVisioplusBundle:Typeverre:create" }
+    methods:  POST
+
+typeverre_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "AbloqovVisioplusBundle:Typeverre:edit" }
+
+typeverre_update:
+    path:     /{id}/update
+    defaults: { _controller: "AbloqovVisioplusBundle:Typeverre:update" }
+    methods:  [POST, PUT]
+
+typeverre_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "AbloqovVisioplusBundle:Typeverre:delete" }
+    methods:  [POST, DELETE]

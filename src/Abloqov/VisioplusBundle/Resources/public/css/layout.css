@@ -1211,3 +1211,66 @@ td.details {
 .block table.marque-consultation td.bouton-validation{ text-align:center;}
 .block table.marque-consultation td.retour-page{ text-align:right;}
 .block table.marque-consultation tr.seperateurV{ height:15px; border:#CCC dashed 0px;}
+
+
+.block div.traitement { text-align:center; width:60%; border:#CCC dashed 0px; margin:auto auto; font-size:12px;  }
+.block table.traitement{ border:#CCC dashed 0px; width:50%; margin:auto auto 100px auto; text-align:center; font-size:14px;}
+.block table.traitement td.libelle{ width:25%; border:#03C dashed 0px; text-align:right}
+.block table.traitement td.seperateur1{ width:2%; border:#0F0 dashed 0px}
+.block table.traitement td.text-input{ width:25%; border:#CCC dashed 0px; text-align:left}
+.block table.traitement td.separateur2{ width:10%; border:#C00 dashed 0px}
+.block table.traitement td.bouton-validation{ text-align:center;}
+.block table.traitement td.retour-page{ text-align:right;}
+.block table.traitement tr.seperateurV{ height:25px; border:#CCC dashed 0px;}
+
+.block div.traitement-consultation { text-align:center; width:40%; border:#CCC dashed 0px; margin:auto auto; font-size:12px;  }
+.block table.traitement-consultation { border:#CCC dashed 0px; width:30%; margin:auto auto 100px auto; text-align:center; font-size:14px;}
+.block table.traitement-consultation td.libelle{ width:15%; border:#03C dashed 0px; text-align:right}
+.block table.traitement-consultation td.seperateur1{ width:2%; border:#0F0 dashed 0px}
+.block table.traitement-consultation td.text-input{ width:25%; border:#CCC dashed 0px; text-align:left; font-size:15px; color:#090; font-weight:bold}
+.block table.traitement-consultation td.separateur2{ width:10%; border:#C00 dashed 0px}
+.block table.traitement-consultation td.bouton-validation{ text-align:center;}
+.block table.traitement-consultation td.retour-page{ text-align:right;}
+.block table.traitement-consultation tr.seperateurV{ height:15px; border:#CCC dashed 0px;}
+
+
+.block div.typeverre { text-align:center; width:60%; border:#CCC dashed 0px; margin:auto auto; font-size:12px;  }
+.block table.typeverre{ border:#CCC dashed 0px; width:50%; margin:auto auto 100px auto; text-align:center; font-size:14px;}
+.block table.typeverre td.libelle{ width:25%; border:#03C dashed 0px; text-align:right}
+.block table.typeverre td.seperateur1{ width:2%; border:#0F0 dashed 0px}
+.block table.typeverre td.text-input{ width:25%; border:#CCC dashed 0px; text-align:left}
+.block table.typeverre td.separateur2{ width:10%; border:#C00 dashed 0px}
+.block table.typeverre td.bouton-validation{ text-align:center;}
+.block table.typeverre td.retour-page{ text-align:right;}
+.block table.typeverre tr.seperateurV{ height:25px; border:#CCC dashed 0px;}
+
+.block div.typeverre-consultation { text-align:center; width:40%; border:#CCC dashed 0px; margin:auto auto; font-size:12px;  }
+.block table.typeverre-consultation { border:#CCC dashed 0px; width:30%; margin:auto auto 100px auto; text-align:center; font-size:14px;}
+.block table.typeverre-consultation td.libelle{ width:15%; border:#03C dashed 0px; text-align:right}
+.block table.typeverre-consultation td.seperateur1{ width:2%; border:#0F0 dashed 0px}
+.block table.typeverre-consultation td.text-input{ width:25%; border:#CCC dashed 0px; text-align:left; font-size:15px; color:#090; font-weight:bold}
+.block table.typeverre-consultation td.separateur2{ width:10%; border:#C00 dashed 0px}
+.block table.typeverre-consultation td.bouton-validation{ text-align:center;}
+.block table.typeverre-consultation td.retour-page{ text-align:right;}
+.block table.typeverre-consultation tr.seperateurV{ height:15px; border:#CCC dashed 0px;}
+
+
+
+.block div.assurance { text-align:center; width:40%; border:#CCC dashed 0px; margin:auto auto; font-size:12px;  }
+.block table.assurance{ border:#CCC dashed 0px; width:50%; margin:auto auto 100px auto; text-align:center; font-size:14px;}
+.block table.assurance td.libelle{ width:15%; border:#03C dashed 0px; text-align:right}
+.block table.assurance td.seperateur1{ width:2%; border:#0F0 dashed 0px}
+.block table.assurance td.text-input{ width:25%; border:#CCC dashed 0px; text-align:left}
+.block table.assurance td.separateur2{ width:10%; border:#C00 dashed 0px}
+.block table.assurance td.bouton-validation{ text-align:center;}
+.block table.assurance td.retour-page{ text-align:right;}
+.block table.assurance tr.seperateurV{ height:25px; border:#CCC dashed 0px;}
+
+.block table.assurance-consultation { border:#CCC dashed 0px; width:50%; margin:auto auto 100px auto; text-align:center; font-size:14px;}
+.block table.assurance-consultation td.libelle{ width:15%; border:#03C dashed 0px; text-align:right}
+.block table.assurance-consultation td.seperateur1{ width:2%; border:#0F0 dashed 0px}
+.block table.assurance-consultation td.text-input{ width:25%; border:#CCC dashed 0px; text-align:left; font-size:15px; color:#090; font-weight:bold}
+.block table.assurance-consultation td.separateur2{ width:10%; border:#C00 dashed 0px}
+.block table.assurance-consultation td.bouton-validation{ text-align:center;}
+.block table.assurance-consultation td.retour-page{ text-align:right;}
+.block table.assurance-consultation tr.seperateurV{ height:15px; border:#CCC dashed 0px;}

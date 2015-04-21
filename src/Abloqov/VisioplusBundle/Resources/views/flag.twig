@@ -1,52 +1,49 @@
 {% extends '::base.html.twig' %}
 
 {% block body -%}
-    <h1>Monture</h1>
+    <h1>Client list</h1>
 
-    <table class="record_properties">
-        <tbody>
+    <table class="records_list">
+        <thead>
             <tr>
                 <th>Id</th>
-                <td>{{ entity.id }}</td>
+                <th>Nom</th>
+                <th>Prenom</th>
+                <th>Sexe</th>
+                <th>Cel</th>
+                <th>Tel</th>
+                <th>Actions</th>
             </tr>
+        </thead>
+        <tbody>
+        {% for entity in entities %}
             <tr>
-                <th>Reference</th>
-                <td>{{ entity.reference }}</td>
+                <td><a href="{{ path('client_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
+                <td>{{ entity.nom }}</td>
+                <td>{{ entity.prenom }}</td>
+                <td>{{ entity.sexe }}</td>
+                <td>{{ entity.cel }}</td>
+                <td>{{ entity.tel }}</td>
+                <td>
+                <ul>
+                    <li>
+                        <a href="{{ path('client_show', { 'id': entity.id }) }}">show</a>
+                    </li>
+                    <li>
+                        <a href="{{ path('client_edit', { 'id': entity.id }) }}">edit</a>
+                    </li>
+                </ul>
+                </td>
             </tr>
-            <tr>
-                <th>Genre</th>
-                <td>{{ entity.genre }}</td>
-            </tr>
-            <tr>
-                <th>Prix_vente</th>
-                <td>{{ entity.prixvente }}</td>
-            </tr>
-            <tr>
-                <th>Stock</th>
-                <td>{{ entity.stock }}</td>
-            </tr>
-            <tr>
-                <th>Datecreation_at</th>
-                <td>{{ entity.datecreationat|date('Y-m-d H:i:s') }}</td>
-            </tr>
-            <tr>
-                <th>Datemodification_at</th>
-                <td>{{ entity.datemodificationat|date('Y-m-d H:i:s') }}</td>
-            </tr>
+        {% endfor %}
         </tbody>
     </table>
 
-        <ul class="record_actions">
-    <li>
-        <a href="{{ path('monture') }}">
-            Back to the list
-        </a>
-    </li>
-    <li>
-        <a href="{{ path('monture_edit', { 'id': entity.id }) }}">
-            Edit
-        </a>
-    </li>
-    <li>{{ form(delete_form) }}</li>
-</ul>
-{% endblock %}
+        <ul>
+        <li>
+            <a href="{{ path('client_new') }}">
+                Create a new entry
+            </a>
+        </li>
+    </ul>
+    {% endblock %}

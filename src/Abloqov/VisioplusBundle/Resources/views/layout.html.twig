@@ -5,7 +5,7 @@
     <link rel="shortcut icon" type="image/png" href="{{ asset('bundles/abloqovvisioplus/images/favicon.fw.png') }}" />
     <title>
         {% block title %}
-            Visio + 0.1 :: Système de gestion des officines d'optique
+            Visio + 0.2 :: Système de gestion des officines d'optique
         {% endblock %}
     </title>
     
@@ -46,7 +46,7 @@
         <div class="grid_12">
             <ul class="nav main">
                 <li class="ic-dashboard"><a href=""><span>Tableau de bord</span></a></li>
-                <li class="ic-form-style"><a href="javascript:"><span>Assurances</span></a></li>
+                <li class="ic-form-style"><a href="{{ path('assurance') }}"><span>Assurances</span></a></li>
                 <li class="ic-client"><a href=""><span>Clients</span></a></li>
 				<li class="ic-facturation"><a href=""><span>Facturations</span></a></li>
                 <li class="ic-montures"><a href="javascript:"><span>Montures</span></a>
@@ -58,10 +58,10 @@
                     </ul>
                 </li>
                 <li class="ic-facturation"><a href=""><span>Règlements</span></a></li>
-                <li class="ic-notifications"><a href=" "><span>Traitements</span></a></li>
+                <li class="ic-notifications"><a href="{{ path('traitement') }}"><span>Traitements</span></a></li>
                 <li class="ic-verre"><a href="javascript:"><span>Verres</span></a>
                		 <ul>
-                        <li><a href=" ">Types verres</a> </li>
+                        <li><a href="{{ path('typeverre') }} ">Types verres</a> </li>
                         <li><a href=" ">Fournisseurs</a> </li>
                         <li><a href=" ">Approvisionnements</a> </li>
                     </ul>

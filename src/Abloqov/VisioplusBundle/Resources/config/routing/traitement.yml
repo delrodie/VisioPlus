@@ -1,0 +1,30 @@
+traitement:
+    path:     /
+    defaults: { _controller: "AbloqovVisioplusBundle:Traitement:index" }
+
+traitement_show:
+    path:     /{id}/show
+    defaults: { _controller: "AbloqovVisioplusBundle:Traitement:show" }
+
+traitement_new:
+    path:     /new
+    defaults: { _controller: "AbloqovVisioplusBundle:Traitement:new" }
+
+traitement_create:
+    path:     /create
+    defaults: { _controller: "AbloqovVisioplusBundle:Traitement:create" }
+    methods:  POST
+
+traitement_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "AbloqovVisioplusBundle:Traitement:edit" }
+
+traitement_update:
+    path:     /{id}/update
+    defaults: { _controller: "AbloqovVisioplusBundle:Traitement:update" }
+    methods:  [POST, PUT]
+
+traitement_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "AbloqovVisioplusBundle:Traitement:delete" }
+    methods:  [POST, DELETE]

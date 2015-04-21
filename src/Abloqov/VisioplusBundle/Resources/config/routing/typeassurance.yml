@@ -1,0 +1,30 @@
+typeassurance:
+    path:     /
+    defaults: { _controller: "AbloqovVisioplusBundle:Typeassurance:index" }
+
+typeassurance_show:
+    path:     /{id}/show
+    defaults: { _controller: "AbloqovVisioplusBundle:Typeassurance:show" }
+
+typeassurance_new:
+    path:     /new
+    defaults: { _controller: "AbloqovVisioplusBundle:Typeassurance:new" }
+
+typeassurance_create:
+    path:     /create
+    defaults: { _controller: "AbloqovVisioplusBundle:Typeassurance:create" }
+    methods:  POST
+
+typeassurance_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "AbloqovVisioplusBundle:Typeassurance:edit" }
+
+typeassurance_update:
+    path:     /{id}/update
+    defaults: { _controller: "AbloqovVisioplusBundle:Typeassurance:update" }
+    methods:  [POST, PUT]
+
+typeassurance_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "AbloqovVisioplusBundle:Typeassurance:delete" }
+    methods:  [POST, DELETE]
